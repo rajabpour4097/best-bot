@@ -57,7 +57,7 @@ MT5_CONFIG = {
 
 # تنظیمات استراتژی
 TRADING_CONFIG = {
-    'threshold': 6,
+    'threshold': 650,  # Slightly higher to ensure minimum 6+ pips per leg (equivalent to EURUSD threshold 6)
     'fib_705': 0.705,
     'fib_90': 0.9,
     'window_size': 100,
