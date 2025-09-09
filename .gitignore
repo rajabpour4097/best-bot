@@ -11,3 +11,4 @@ __pycache__/
 swing_logs.txt
 
 email_config.py
+swing_logs_*

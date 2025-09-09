@@ -44,7 +44,7 @@ FULL_TIME_IRAN = {
 
 # تنظیمات MT5
 MT5_CONFIG = {
-    'symbol': 'EURUSD',
+    'symbol': 'USDJPY',
     'lot_size': 0.01,
     'win_ratio': 1.2,
     'magic_number': 234000,
