@@ -383,7 +383,10 @@ def main():
                                     log(f'Bearish swing violated fib 1.0 - resetting', color='red')
                                     state.reset()
                                     legs = legs[-3:]
-                                    start_index = cache_data.index.tolist().index(legs[0]['start'])
+                                    start_index = max(
+                                        cache_data.index.tolist().index(legs[0]['start']),
+                                        len(cache_data) - window_size
+                                    )
                                 else:
                                     log(f'Bearish swing within fib range - ignoring', color='yellow')
                             elif last_swing_type == 'bearish' and swing_type == 'bullish':
@@ -391,7 +394,10 @@ def main():
                                     log(f'Bullish swing violated fib 1.0 - resetting', color='red')
                                     state.reset()
                                     legs = legs[-3:]
-                                    start_index = cache_data.index.tolist().index(legs[0]['start'])
+                                    start_index = max(
+                                        cache_data.index.tolist().index(legs[0]['start']),
+                                        len(cache_data) - window_size
+                                    )
                                 else:
                                     log(f'Bullish swing within fib range - ignoring', color='yellow')
 
